@@ -1,5 +1,5 @@
 {
-  "name": "vue-img-preview",
+  "name": "@duoa/vue-img-preview",
   "version": "3.0.2",
   "description": "A simple & easy use image preview component.",
   "author": "Duoani <duoani@126.com>",
@@ -89,6 +89,6 @@
     "testMatch": [
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
-    "testURL": "http://localhost/",
+    "testURL": "http://localhost/"
   }
 }
