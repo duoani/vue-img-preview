@@ -1,0 +1,94 @@
+{
+  "name": "vue-img-preview",
+  "version": "3.0.2",
+  "description": "A simple & easy use image preview component.",
+  "author": "Duoani <duoani@126.com>",
+  "private": false,
+  "main": "dist/vue-img-preview.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "webpack-dev-server --config build/webpack.dev.conf.js --hot --progress -d",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duoani/vue-img-preview.git"
+  },
+  "peerDependencies": {
+    "vue": "2.x"
+  },
+  "resolutions": {
+    "ajv": "6.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/runtime": "^7.4.2",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "@vuepress/plugin-active-header-links": "^1.0.0-alpha.47",
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.47",
+    "@vuepress/plugin-pwa": "^1.0.0-alpha.47",
+    "@vuepress/plugin-register-components": "^1.0.0-alpha.47",
+    "@vuepress/plugin-search": "^1.0.0-alpha.47",
+    "autoprefixer": "^9.4.7",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "chokidar": "^2.1.5",
+    "coveralls": "^3.0.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.10",
+    "fuse.js": "^3.2.0",
+    "gh-pages": "^0.11.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "terser-webpack-plugin": "^1.2.3",
+    "url-loader": "^1.1.2",
+    "vue": "^2.6.10",
+    "vue-html-loader": "^1.2.4",
+    "vue-jest": "^3.0.4",
+    "vue-loader": "^15.7.0",
+    "vue-server-renderer": "^2.6.10",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.0.0-alpha.47",
+    "vuex": "^3.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "testURL": "http://localhost/",
+  }
+}
