@@ -10,10 +10,11 @@ Register the component
 ```js
 import Vue from 'vue'
 import VueImgPreview from '@duoa/vue-img-preview'
+import '@duoa/vue-img-preview/dist/vue-img-preview.css'
 
 Vue.use(VueImgPreview)
 
-// set the default z-index
+// You can also set the default z-index
 Vue.use(VueImgPreview, {
   zIndex: 9999
 })
