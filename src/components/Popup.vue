@@ -2,6 +2,7 @@
   <transition name="dip-fade">
     <div
       v-show="show"
+      :style="styles"
       class="dip">
       <div
         class="dip-mask"
@@ -22,17 +23,30 @@
 
 <script>
 export default {
+  
   name: 'Popup',
+  
   props: {
     img: {
       type: String,
       default: ''
+    },
+    zIndex: {
+      type: Number,
+      default: 99999
     },
     show: {
       type: Boolean,
       default: false
     }
   },
+  
+  computed: {
+    styles () {
+      return { zIndex: this.zIndex }
+    }
+  },
+  
   methods: {
     close () {
       this.$emit('close')
@@ -41,6 +55,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
  @import '../scss/index.scss';
 </style>

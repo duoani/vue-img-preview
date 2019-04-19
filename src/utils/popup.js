@@ -1,6 +1,17 @@
 import PopupPreview from '../components/Popup'
+import config from '../config'
 
 export default function popup(Vue, img) {
+  let zIndex = config.get('zIndex')
+  let url
+  if (typeof img === 'string') {
+    url = img
+  } else if (img instanceof Object) {
+    url = img.img || ''
+    if (typeof img.zIndex === 'number') {
+      zIndex = img.zIndex
+    }
+  }
   var newPopup
   var vm
   var el
@@ -12,7 +23,8 @@ export default function popup(Vue, img) {
     },
     render(h) {
       const props = {
-        img,
+        zIndex,
+        img: url,
         show: this.show
       }
       return h(PopupPreview, {

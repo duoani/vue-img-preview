@@ -5,13 +5,10 @@
 </template>
 
 <script>
-import Preview from '../src/directives/preview'
-
-// import countries from '../docs/.vuepress/data/countryCodes';
-// import books from '../docs/.vuepress/data/books';
+// import Preview from '../src/directives/preview'
 
 export default {
-  directives: { Preview },
+  // directives: { Preview },
   data () {
     return {
       img: '/dev/sight.jpeg'
