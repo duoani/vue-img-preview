@@ -7,14 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>vue-img-preview</title>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/@duoa/vue-img-preview@3.0.6/dist/vue-img-preview.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/@duoa/vue-img-preview@3.0.6/dist/vue-img-preview.css">
+  <script src="https://unpkg.com/@duoa/vue-img-preview@3.0.7/dist/vue-img-preview.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@duoa/vue-img-preview@3.0.7/dist/vue-img-preview.css">
 </head>
 
 <body>
   <div id="app">
     <template>
-      <button v-preview="img">Click To Preview</button>
+      <p>
+        <button v-preview="img">Preview</button>
+      </p>
+      <p>
+        <button v-preview="img" v-preview:title="'This is a title'">Preview with a title</button>
+      </p>
+      <p>
+        <button @click="handleClick">Preview using $imgPreview</button>
+      </p>
     </template>
   </div>
   <script>
@@ -23,6 +31,15 @@
         return {
           img: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?cs=srgb&dl=bright-bulb-close-up-1108572.jpg&fm=jpg'
         };
+      },
+      methods: {
+        handleClick() {
+          this.$imgPreview({
+            img: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?cs=srgb&dl=bright-bulb-close-up-1108572.jpg&fm=jpg',
+            title: 'Nice sight',
+            zIndex: 99
+          })
+        }
       }
     }
     var Ctor = Vue.extend(Main)

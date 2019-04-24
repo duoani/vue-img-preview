@@ -3,11 +3,13 @@ import config from '../config'
 
 export default function popup(Vue, img) {
   let zIndex = config.get('zIndex')
+  let title = ''
   let url
   if (typeof img === 'string') {
     url = img
   } else if (img instanceof Object) {
     url = img.img || ''
+    title = img.title || ''
     if (typeof img.zIndex === 'number') {
       zIndex = img.zIndex
     }
@@ -24,6 +26,7 @@ export default function popup(Vue, img) {
     render(h) {
       const props = {
         zIndex,
+        title,
         img: url,
         show: this.show
       }

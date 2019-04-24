@@ -7,6 +7,9 @@
       <div
         class="dip-mask"
         @click="close"></div>
+      <div
+        v-if="title"
+        class="dip-title">{{ title }}</div>
       <img
         :src="img"
         class="img"/>
@@ -26,6 +29,10 @@ export default {
     img: {
       type: String,
       default: ''
+    },
+    title: {
+      type: String,
+      default: '',
     },
     zIndex: {
       type: Number,

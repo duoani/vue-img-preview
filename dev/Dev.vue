@@ -1,6 +1,14 @@
 <template>
   <div id="app">
-    <span v-preview="img">Hello</span>
+    <p>
+      <button v-preview="img">Simple Preview</button>
+    </p>
+    <p>
+      <button v-preview="img" v-preview:title="'This is a title'">Preview with a title</button>
+    </p>
+    <p>
+      <button @click="handleClick">Preview using $imgPreview</button>
+    </p>
   </div>
 </template>
 
@@ -12,6 +20,15 @@ export default {
   data () {
     return {
       img: '/dev/sight.jpeg'
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$imgPreview({
+        img: '/dev/sight.jpeg',
+        title: 'Nice sight',
+        zIndex: 99
+      })
     }
   }
 };

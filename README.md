@@ -34,7 +34,7 @@ You may now use the `v-preview` directive in your markup.
 
 ```html
 <template>
-  <span v-preview="img">Preview</span>
+  <button v-preview="img">Preview</button>
 </template>
 <script>
 export default {
@@ -48,3 +48,50 @@ export default {
 ```
 
 That's all you need to do!
+
+If you want to specify the `z-index` property of the preview popup, use the `v-preview:z-index` directive.
+
+If you want to display a title, use the `v-preview:title` directive.
+
+```html
+<template>
+  <button
+    v-preview="img"
+    v-preview:z-index="zIndex"
+    v-preview:title="title">Preview</button>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      img: 'http://your.img.url'
+      zIndex: 999,
+      title: 'A title'
+    }
+  }
+}
+</script>
+```
+
+## API invocation
+
+You can also use the `this.$imgPreview(options)` method instead of the `v-preview` directive.
+
+```html
+<template>
+  <button @click="handleClick">Preview</button>
+</template>
+<script>
+export default {
+  methods: {
+    handleClick () {
+      this.$imgPreview({
+        img: 'http://your.img.url',
+        title: 'Put a title here if needed',
+        zIndex: 99
+      })
+    }
+  }
+}
+</script>
+```
