@@ -45,6 +45,6 @@ export default function popup(Vue, img) {
   newPopup = new VuePopupPreview()
   vm = newPopup.$mount()
   el = vm.$el
-  document.body.appendChild(el) // 把生成的提示的dom插入body中
+  document.body.appendChild(el)
   vm.show = true
 }

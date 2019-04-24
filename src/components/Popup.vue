@@ -10,10 +10,6 @@
       <img
         :src="img"
         class="img"/>
-      <!-- <a
-        :href="img"
-        class="new-tab"
-        target="_blank">新页面打开</a> -->
       <i
         class="dip-close dipfont dip-close"
         @click="close"></i>

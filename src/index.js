@@ -4,9 +4,6 @@ import config from './config'
 
 const POPUP = {
   install(Vue, options = {}) {
-    if (typeof window !== 'undefined' && window.Vue) {
-      Vue = window.Vue
-    }
     const { zIndex } = options
     if (typeof zIndex === 'number') {
       config.set('zIndex', zIndex)
@@ -18,6 +15,10 @@ const POPUP = {
       popup(Vue, url)
     }
   }
+}
+
+if (typeof window !== 'undefined' && window.Vue) {
+  POPUP.install(window.Vue)
 }
 
 export default POPUP

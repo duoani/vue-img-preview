@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue-img-preview</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="../dist/vue-img-preview.js"></script>
+  <link rel="stylesheet" href="../dist/vue-img-preview.css">
+</head>
+
+<body>
+  <div id="app">
+    <template>
+      <button v-preview="img">Click To Preview</button>
+    </template>
+  </div>
+  <script>
+    var Main = {
+      data() {
+        return {
+          img: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?cs=srgb&dl=bright-bulb-close-up-1108572.jpg&fm=jpg'
+        };
+      }
+    }
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
+  </script>
+</body>
+
+</html>

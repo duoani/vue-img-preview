@@ -1,5 +1,13 @@
 
-## install
+# Vue Img Preview
+
+An simple & easy use component for image preview.
+
+## Take a glance
+
+<a href="https://duoani.github.io/vue-img-preview/" target="_blank">Online Demo</a>
+
+## Installation
 
 ```bash
 npm install @duoa/vue-img-preview
@@ -10,8 +18,10 @@ Register the component
 ```js
 import Vue from 'vue'
 import VueImgPreview from '@duoa/vue-img-preview'
+// Because this components has its styles, you must also import the css file.
 import '@duoa/vue-img-preview/dist/vue-img-preview.css'
 
+// Register
 Vue.use(VueImgPreview)
 
 // You can also set the default z-index
@@ -36,3 +46,5 @@ export default {
 }
 </script>
 ```
+
+That's all you need to do!
