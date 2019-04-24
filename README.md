@@ -5,7 +5,7 @@ An simple & easy use component for image preview.
 
 ## Take a glance
 
-<a href="https://duoani.github.io/vue-img-preview/" target="_blank">Online Demo</a>
+<a href="https://duoani.github.io/vue-img-preview/index.html" target="_blank">Online Demo</a>
 
 ## Installation
 
