@@ -3,6 +3,7 @@
   "version": "3.0.9",
   "description": "A simple & easy use image preview component.",
   "author": "Duoani <duoani@126.com>",
+  "keywords": ["vue", "preview", "img-preview", "image preview", "popup preview"],
   "private": false,
   "main": "dist/vue-img-preview.js",
   "license": "MIT",
