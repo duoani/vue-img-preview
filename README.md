@@ -1,7 +1,7 @@
 
 # Vue Img Preview
 
-An simple & easy use component for image preview.
+A simple & easy use component for image preview.
 
 ## Take a glance
 
@@ -10,8 +10,9 @@ An simple & easy use component for image preview.
 ## Installation
 
 ```bash
-npm install @duoa/vue-img-preview
+npm i -S @duoa/vue-img-preview
 ```
+## Usage
 
 Register the component
 
@@ -73,7 +74,7 @@ export default {
 </script>
 ```
 
-## API invocation
+### API invocation
 
 You can also use the `this.$imgPreview(options)` method instead of the `v-preview` directive.
 
